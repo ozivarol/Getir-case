@@ -116,4 +116,4 @@ Application always responds in json. In this json, *code* property's value has m
 Application running in the cloud with Heroku. <br>
 endpoint of the API is 'api/filter' <br>
 Click and play with it!
-<a href="https://getir-case-oguzhan-varol.herokuapp.com/" target="blank"><img align="center" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/heroku_logo_icon_169035.png" alt="oguzhnavarol" height="75" width="200" /></a>
+<a href="https://getir-case-oguzhan-varol.herokuapp.com/api" target="blank"><img align="center" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/heroku_logo_icon_169035.png" alt="oguzhnavarol" height="75" width="200" /></a>
