@@ -96,7 +96,7 @@ Available endpoints in application
                ]
            }
     ```
-    ## Error Meanings
+    
 ## Error Meanings
 Application always responds in json. In this json, *code* property's value has meanings. These are;
 | Code Value  | Meaning    |
