@@ -4,6 +4,9 @@ const loaders = require("./loaders");
 const cors = require("cors");
 const ApiError = require("./helpers/errorHandling")
 const {RecordRouters} = require("./routers")
+const morgan = require("morgan");
+const path = require("path");
+const fs = require("fs")
 config();
 // config and loaders are called directly here.
 loaders();
@@ -15,7 +18,7 @@ app.use(express.json()); //Json parser
 
 app.use(
     express.urlencoded({   
-                                //Body parser
+        //Body parser
         extended:false,
     })
 )
@@ -26,6 +29,9 @@ app.use(cors({
 
     
 }));
+
+const accessLogStream = fs.createWriteStream(path.join(__dirname,"access.log"),{flags:"a"})
+app.use(morgan("combined", {stream:accessLogStream}))
 
 
 app.listen(process.env.PORT, () => {
