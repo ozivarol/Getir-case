@@ -31,7 +31,7 @@ Error.MissingParams = (res,error) => {
 Error.WrongParams = (res,error) => {
     res.status(hs.BAD_REQUEST).json({
         code:4,
-        msg:"You entered an incorrect parameter. Please make sure startDate and endDate are in the format (YYYY-MM-DD), remember that minCount and maxCount are numbers (eg 2700)."
+        msg:"You entered an incorrect parameter. Please make sure startDate and endDate are in the format (YYYY-MM-DD), remember that minCount and maxCount are numbers."
 
     })
 }

@@ -36,7 +36,7 @@ const app = require('../src/app');
         });
     });
 
-    test('MinCount > maxcount it should response 400 - 3', done => {
+    test('MinCount > maxcount it should response 400', done => {
       request(app)
         .post('/api/filter')
         .send({
@@ -52,7 +52,7 @@ const app = require('../src/app');
     });
 
 
-    test('If min count or max count is less than zero it should response 400 - 4', done => {
+    test('If min count or max count is less than zero it should response 400', done => {
       request(app)
         .post('/api/filter')
         .send({
@@ -68,7 +68,7 @@ const app = require('../src/app');
     });
 
 
-    test('If startDate is greater than endDate it should response 400 - 5', done => {
+    test('If startDate is greater than endDate it should response 400', done => {
       request(app)
         .post('/api/filter')
         .send({

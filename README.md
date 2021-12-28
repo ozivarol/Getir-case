@@ -105,7 +105,7 @@ Application always responds in json. In this json, *code* property's value has m
 | 1           |  An error has occurred in the system.|
 | 2           | One or more values are missing, please check the entered values.(startDate,endDate,minCount,maxCount).|
 | 3           |  Syntax is wrong.|
-| 4           |  You entered an incorrect parameter. Please make sure startDate and endDate are in the format (YYYY-MM-DD), remember that minCount and maxCount are numbers (eg 2700).|
+| 4           |  You entered an incorrect parameter. Please make sure startDate and endDate are in the format (YYYY-MM-DD), remember that minCount and maxCount are numbers.|
 | 5           |  No such endpoint found, please check.|
 | 6           |  Start date cannot be later than today.|
 | 7           |  End date must be today or earlier.|
