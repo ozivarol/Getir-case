@@ -21,7 +21,7 @@ const app = require('../src/app');
         });
     });
   
-    test('Invalid params it should response 400 - 2', done => {
+    test('Invalid params it should response 400', done => {
       request(app)
         .post('/api/filter')
         .send({
