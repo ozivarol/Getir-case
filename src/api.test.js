@@ -35,7 +35,60 @@ const app = require('../src/app');
           done();
         });
     });
+
+    test('MinCount > maxcount it should response 400 - 3', done => {
+      request(app)
+        .post('/api/filter')
+        .send({
+          startDate: '20-06-1900',
+          endDate: "20-06-1991",
+          minCount: 300,
+          maxCount: 200,
+        })
+        .then(response => {
+          expect(response.statusCode).toBe(400);
+          done();
+        });
+    });
+
+
+    test('If min count or max count is less than zero it should response 400 - 4', done => {
+      request(app)
+        .post('/api/filter')
+        .send({
+          startDate: '20-06-1900',
+          endDate: "20-06-1991",
+          minCount: -1,
+          maxCount: 200,
+        })
+        .then(response => {
+          expect(response.statusCode).toBe(400);
+          done();
+        });
+    });
+
+
+    test('If startDate is greater than endDate it should response 400 - 4', done => {
+      request(app)
+        .post('/api/filter')
+        .send({
+          startDate: '20-06-2010',
+          endDate: "20-06-1991",
+          minCount: -1,
+          maxCount: 200,
+        })
+        .then(response => {
+          expect(response.statusCode).toBe(400);
+          done();
+        });
+    });
+
+
+
   });
+
+
+
 
   
   
