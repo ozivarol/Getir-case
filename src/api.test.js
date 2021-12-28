@@ -25,9 +25,9 @@ const app = require('../src/app');
       request(app)
         .post('/api/filter')
         .send({
-          startDate: 'bar',
+          startDate: '20-06-1900',
           endDate: 0,
-          minCount: '...',
+          minCount: 'Hello',
           maxCount: ''
         })
         .then(response => {
