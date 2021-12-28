@@ -68,14 +68,14 @@ const app = require('../src/app');
     });
 
 
-    test('If startDate is greater than endDate it should response 400 - 4', done => {
+    test('If startDate is greater than endDate it should response 400 - 5', done => {
       request(app)
         .post('/api/filter')
         .send({
           startDate: '20-06-2010',
           endDate: "20-06-1991",
-          minCount: -1,
-          maxCount: 200,
+          minCount: 100,
+          maxCount: 5000,
         })
         .then(response => {
           expect(response.statusCode).toBe(400);
